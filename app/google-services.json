@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "205834454257",
+    "project_id": "dsm-firebase-auth-3169f",
+    "storage_bucket": "dsm-firebase-auth-3169f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205834454257:android:1f5d9b34eb55deda169550",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFHEKGI5NTHOGCaDVDzEDWVvbt9iJ-RZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205834454257:android:56f6f2a17525aa52169550",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauth2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFHEKGI5NTHOGCaDVDzEDWVvbt9iJ-RZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
