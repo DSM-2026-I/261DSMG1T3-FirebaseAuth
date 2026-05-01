@@ -26,14 +26,15 @@ fun InitialScreen(
             onClick = navigateToSignUp,
             modifier = Modifier.padding(16.dp)
         ) {
-            Text("Register")
+            Text("Register with email")
         }
 
         Button(
             onClick = navigateToLogin,
             modifier = Modifier.padding(16.dp)
         ) {
-            Text("Login")
+            Text("Login with email")
         }
+
     }
 }

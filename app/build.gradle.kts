@@ -63,4 +63,5 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.compose.material.icons.extended.android)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.ui.auth)
 }
