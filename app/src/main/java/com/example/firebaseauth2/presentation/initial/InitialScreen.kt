@@ -58,16 +58,21 @@ fun InitialScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Text("Welcome")
         Button(
             onClick = navigateToSignUp,
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 32.dp, vertical = 4.dp),
         ) {
             Text("Register with email")
         }
 
         Button(
             onClick = navigateToLogin,
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 32.dp, vertical = 4.dp),
         ) {
             Text("Login with email")
         }
