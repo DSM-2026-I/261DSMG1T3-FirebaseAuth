@@ -91,10 +91,10 @@ fun LoginScreen(
                     auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             val user = task.result?.user
-                            Log.d("AUTH", "Login correcto: ${user?.email}")
+                            Log.d("AUTH", "Login correct: ${user?.email}")
                             onLoginSuccess()
                         } else {
-                            Toast.makeText(context, "Registration failed!!" + "${task.exception?.message}", Toast.LENGTH_LONG).show()
+                            Toast.makeText(context, "Login failed!!" + "${task.exception?.message}", Toast.LENGTH_LONG).show()
                             Log.e("AUTH", "Error: ${task.exception?.message}")
                         }
                     }
