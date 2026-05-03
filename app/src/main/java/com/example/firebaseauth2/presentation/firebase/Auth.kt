@@ -1,5 +1,6 @@
 package com.example.firebaseauth2.presentation.firebase
 
+import android.content.Context
 import android.content.Intent
 import com.firebase.ui.auth.AuthUI
 
@@ -18,4 +19,12 @@ fun getSignInIntent(provider: ProviderType): Intent {
         .createSignInIntentBuilder()
         .setAvailableProviders(listOf(idpConfig))
         .build()
+}
+
+fun signOut(context: Context, onComplete: () -> Unit) {
+    AuthUI.getInstance()
+        .signOut(context)
+        .addOnCompleteListener {
+            onComplete()
+        }
 }

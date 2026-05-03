@@ -1,9 +1,11 @@
 package com.example.firebaseauth2
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.firebaseauth2.presentation.firebase.signOut
 import com.example.firebaseauth2.presentation.home.HomeScreen
 import com.example.firebaseauth2.presentation.initial.InitialScreen
 import com.example.firebaseauth2.presentation.login.LoginScreen
@@ -48,7 +50,14 @@ fun NavigationWrapper(
             )
         }
         composable ("home"){
-            HomeScreen()
+            val context = LocalContext.current
+            HomeScreen {
+                signOut(context) {
+                    navHostController.navigate("initial") {
+                        popUpTo("home") { inclusive = true }
+                    }
+                }
+            }
         }
     }
 }
