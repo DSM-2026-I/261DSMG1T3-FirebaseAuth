@@ -22,14 +22,23 @@ fun NavigationWrapper(
         composable ("initial"){
             InitialScreen(
                 navigateToLogin = {navHostController.navigate("login")},
-                navigateToSignUp = {navHostController.navigate("signup")}
+                navigateToSignUp = {navHostController.navigate("signup")},
+                onLoginSuccess = {
+                    navHostController.navigate("home"){
+                        popUpTo("initial") {inclusive = true}
+                    }
+                }
             )
         }
         composable ("login"){
             LoginScreen(
                 auth,
                 navigateToSignUp = {navHostController.navigate("signUp")},
-                onLoginSuccess = {navHostController.navigate("home")}
+                onLoginSuccess = {
+                    navHostController.navigate("home"){
+                        popUpTo("initial") {inclusive = true}
+                    }
+                }
             )
         }
         composable ("signup"){

@@ -35,14 +35,14 @@ import com.firebase.ui.auth.R
 fun InitialScreen(
     navigateToLogin: () -> Unit = {},
     navigateToSignUp: () -> Unit = {},
-    onLogInSuccess: () -> Unit = {}
+    onLoginSuccess: () -> Unit = {}
 ){
     val context = LocalContext.current
     val signInLauncher = rememberLauncherForActivityResult(
         FirebaseAuthUIActivityResultContract()
     ) { res ->
         if (res.resultCode == RESULT_OK) {
-            onLogInSuccess()
+            onLoginSuccess()
         } else {
             val response = res.idpResponse
             Toast.makeText(
@@ -130,7 +130,7 @@ fun InitialScreenPreview() {
         InitialScreen(
             navigateToLogin = {},
             navigateToSignUp = {},
-            onLogInSuccess = {}
+            onLoginSuccess = {}
         )
     }
 }
