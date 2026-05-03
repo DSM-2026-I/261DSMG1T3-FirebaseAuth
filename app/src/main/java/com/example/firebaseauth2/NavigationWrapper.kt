@@ -35,7 +35,7 @@ fun NavigationWrapper(
         composable ("login"){
             LoginScreen(
                 auth,
-                navigateToSignUp = {navHostController.navigate("signUp")},
+                navigateToSignUp = {navHostController.navigate("signup")},
                 onLoginSuccess = {
                     navHostController.navigate("home"){
                         popUpTo("initial") {inclusive = true}
@@ -51,7 +51,7 @@ fun NavigationWrapper(
         }
         composable ("home"){
             val context = LocalContext.current
-            HomeScreen {
+            HomeScreen(auth.currentUser?.email) {
                 signOut(context) {
                     navHostController.navigate("initial") {
                         popUpTo("home") { inclusive = true }

@@ -52,7 +52,7 @@ fun LoginScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         val context = LocalContext.current
-        // Título
+        // Title
         Text(
             text = "Login",
             fontSize = 32.sp,
@@ -60,7 +60,7 @@ fun LoginScreen(
             modifier = Modifier.padding(32.dp)
         )
 
-        // Campo de Email
+        // Email field
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
@@ -70,7 +70,7 @@ fun LoginScreen(
                 .padding(vertical = 8.dp)
         )
 
-        // Campo de Password
+        // Password field
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
@@ -82,7 +82,7 @@ fun LoginScreen(
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
 
-        // Botón de Login
+        // Login button
         Button(
             onClick = {
                 if (email.isEmpty() || password.isEmpty()) {

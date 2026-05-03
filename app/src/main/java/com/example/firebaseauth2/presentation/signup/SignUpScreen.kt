@@ -43,7 +43,7 @@ fun SignUpScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         val context = LocalContext.current
-        // Título
+        // Title
         Text(
             text = "Register",
             fontSize = 32.sp,
@@ -51,7 +51,7 @@ fun SignUpScreen(
             modifier = Modifier.padding(32.dp)
         )
 
-        // Campo de Email
+        // Email field
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
@@ -61,7 +61,7 @@ fun SignUpScreen(
                 .padding(vertical = 8.dp)
         )
 
-        // Campo de Password
+        // Password field
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
@@ -73,10 +73,8 @@ fun SignUpScreen(
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
 
-        // Botón de Register
         Button(
             onClick = {
-            /* Acción de registro */
                 registerNewUser(auth,email,password,context,onRegisterSuccess)
             },
             modifier = Modifier
